@@ -1,0 +1,277 @@
+<!-- ===== PROJETS ===== -->
+<section class="section section-alt" id="projets">
+  <div class="container">
+    <header class="section-head reveal">
+      <span class="section-num">04</span>
+      <h2 data-i18n="projects.title">Projets</h2>
+    </header>
+
+    <div class="filters reveal" role="group" aria-label="Filtres">
+      <button type="button" class="filter is-active" data-filter="all" data-i18n="filter.all">Tous</button>
+      <button type="button" class="filter" data-filter="soft" data-i18n="filter.soft">Logiciel</button>
+      <button type="button" class="filter" data-filter="web" data-i18n="filter.web">Web</button>
+      <button type="button" class="filter" data-filter="sys" data-i18n="filter.sys">Système &amp; matériel</button>
+    </div>
+
+    <!--
+      MODÈLE POUR AJOUTER UN PROJET (copier, décommenter, remplir)
+      data-cat : "soft" (logiciel), "web" ou "sys" (système & matériel)
+      Les liens (.project-links) sont facultatifs : supprime ceux que tu n'as pas.
+
+      <article class="project reveal" data-cat="web">
+        <div class="project-img"><img src="assets/img/NOM_IMAGE.png" alt="TITRE" loading="lazy"></div>
+        <div class="project-body">
+          <span class="project-meta" data-i18n="pX.meta">SAÉ · Équipe de N</span>
+          <h3 data-i18n="pX.t">Titre du projet</h3>
+          <p data-i18n="pX.d">Description courte.</p>
+          <details>
+            <summary data-i18n="more">Ce que j'ai appris</summary>
+            <p data-i18n="pX.l">Ce que le projet m'a apporté.</p>
+          </details>
+          <ul class="tags"><li>Techno 1</li><li>Techno 2</li></ul>
+          <div class="project-links">
+            <a class="project-link project-link--primary" href="URL_SITE" target="_blank" rel="noopener" data-i18n="link.demo">Voir le site</a>
+            <a class="project-link" href="URL_GITHUB" target="_blank" rel="noopener" data-i18n="link.code">Voir le code</a>
+          </div>
+        </div>
+      </article>
+    -->
+
+    <div class="projects-grid">
+
+      <article class="project reveal" data-cat="web">
+        <div class="project-img"><img src="assets/img/meto-adresse.png"
+            alt="Application météo : la météo affichée pour une adresse" loading="lazy"></div>
+        <div class="project-body">
+          <span class="project-meta" data-i18n="p9.meta">Projet IUT · Individuel</span>
+          <h3 data-i18n="p9.t">La météo à votre adresse</h3>
+          <p data-i18n="p9.d">Application web qui affiche la météo d'une adresse saisie par l'utilisateur, une rue
+            précise ou simplement une ville. Elle enchaîne deux API : celle de l'IGN pour obtenir les coordonnées de
+            l'adresse, puis OpenWeatherMap pour récupérer la météo à cet endroit.</p>
+          <details>
+            <summary data-i18n="more">Ce que j'ai appris</summary>
+            <p data-i18n="p9.l">Ce projet m'a appris à enchaîner des requêtes HTTP asynchrones avec fetch et
+              async/await, la seconde dépendant du résultat de la première. J'ai aussi appris à lire la documentation
+              d'une API et à exploiter ses réponses JSON, à organiser l'application en classes avec une seule
+              responsabilité chacune, et à configurer webpack pour empaqueter le projet.</p>
+          </details>
+          <details>
+            <summary data-i18n="features">Fonctionnalités</summary>
+            <ul class="feat">
+              <li data-i18n="p9.f1">Recherche par adresse précise (rue, numéro) ou par ville</li>
+              <li data-i18n="p9.f2">Température, ressenti, description, humidité et vent</li>
+              <li data-i18n="p9.f3">Gestion des erreurs : champ vide, adresse introuvable, problème réseau</li>
+              <li data-i18n="p9.f4">Interface responsive</li>
+            </ul>
+          </details>
+          <ul class="tags">
+            <li>JavaScript</li>
+            <li>API REST</li>
+            <li>Webpack</li>
+            <li data-i18n="tag.oop">POO</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="project reveal" data-cat="soft">
+        <div class="project-img"><img src="assets/img/temps_route.png"
+            alt="Calculateur de temps de route : trajet Brest → Nice et tableau des temps" loading="lazy"></div>
+        <div class="project-body">
+          <span class="project-meta" data-i18n="p7.meta">Projet IUT · Projet individuel</span>
+          <h3 data-i18n="p7.t">Calculateur de temps de route</h3>
+          <p data-i18n="p7.d">Application de bureau en C++ et Qt qui calcule le trajet le plus rapide entre deux villes
+            françaises et affiche le chemin sous forme de liste de villes (ville 1 -> ville 2 -> … -> ville n). Elle
+            compare aussi les temps de trajet dans un tableau et trouve le meilleur emplacement pour un dépôt. Les
+            données couvrent 100 villes et 542 liaisons routières.</p>
+          <details>
+            <summary data-i18n="more">Ce que j'ai appris</summary>
+            <p data-i18n="p7.l">Ce projet m'a fait relier les mathématiques, la programmation en C++ et la création
+              d'une interface avec Qt. Les temps de trajet sont stockés dans un graphe pondéré : chaque ville est un
+              sommet et chaque route a pour poids sa durée. Le cœur du travail a été le <strong>choix de
+                l'algorithme</strong>. J'ai retenu Floyd–Warshall, qui calcule en une seule fois les temps minimaux
+              entre toutes les paires de villes : c'est adapté à une application qui compare beaucoup de trajets. Sa
+              complexité en O(V³) reste raisonnable pour 100 villes, et chaque recherche devient ensuite instantanée.
+              Pour le dépôt, j'ai implémenté deux critères : réduire la somme des temps de trajet, ou réduire le temps
+              du trajet le plus long.</p>
+          </details>
+          <details>
+            <summary data-i18n="features">Fonctionnalités</summary>
+            <ul class="feat">
+              <li data-i18n="p7.f1">Itinéraire le plus rapide, avec les villes traversées</li>
+              <li data-i18n="p7.f2">Tableau comparatif des temps entre plusieurs villes</li>
+              <li data-i18n="p7.f3">Tri par nom ou par population, filtre par région</li>
+              <li data-i18n="p7.f4">Dépôt optimal selon deux critères</li>
+            </ul>
+          </details>
+          <ul class="tags">
+            <li>C++17</li>
+            <li>Qt Widgets</li>
+            <li data-i18n="tag.graphs">Graphes</li>
+            <li>Floyd–Warshall</li>
+            <li>CSV</li>
+          </ul>
+          <div class="project-links">
+            <a class="project-link project-link--primary"
+              href="https://github.com/user-attachments/assets/3a87c5ff-3210-4f61-b973-5933b0c01a64" target="_blank"
+              rel="noopener" data-i18n="link.video">Voir la démo</a>
+            <a class="project-link" href="https://github.com/Tekrian/villes_cartes" target="_blank" rel="noopener"
+              data-i18n="link.code">Voir le code</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project reveal" data-cat="web">
+        <div class="project-img"><img src="assets/img/portfolio_v1.png" alt="Page d'accueil de mon premier portfolio"
+            loading="lazy"></div>
+        <div class="project-body">
+          <span class="project-meta" data-i18n="p8.meta">BUT 1 · Projet individuel</span>
+          <h3 data-i18n="p8.t">Mon premier portfolio</h3>
+          <p data-i18n="p8.d">Mon premier portfolio, réalisé en HTML et CSS et mis en ligne sur Vercel. Il présente mon
+            parcours, mes compétences et mes projets sur cinq pages reliées par un menu.</p>
+          <details>
+            <summary data-i18n="more">Ce que j'ai appris</summary>
+            <p data-i18n="p8.l">Ce premier portfolio m'a appris à me présenter à travers un site : choisir ce que je
+              montre de mon parcours, de mes compétences et de mes projets, et la manière de le raconter. C'est aussi
+              avec lui que j'ai appris à héberger un site en ligne avec Vercel. Il m'a enfin servi de base pour
+              construire la version actuelle.</p>
+          </details>
+          <ul class="tags">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>GitHub</li>
+            <li>Vercel</li>
+          </ul>
+          <div class="project-links">
+            <a class="project-link project-link--primary" href="https://portfolio-but1.vercel.app/" target="_blank"
+              rel="noopener" data-i18n="link.demo">Voir le site</a>
+            <a class="project-link" href="https://github.com/Tekrian/Portfolio_BUT1" target="_blank" rel="noopener"
+              data-i18n="link.code">Voir le code</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project reveal" data-cat="soft">
+        <div class="project-img"><img src="assets/img/meubles.png" alt="" loading="lazy"></div>
+        <div class="project-body">
+          <span class="project-meta" data-i18n="p6.meta">Projet IUT · Équipe de 2</span>
+          <h3 data-i18n="p6.t">Application IHM (Qt)</h3>
+          <p data-i18n="p6.d">Programme pour charger, éditer et sauvegarder des fichiers de données XML / JSON, avec une
+            interface Qt responsive.</p>
+          <details>
+            <summary data-i18n="features">Fonctionnalités</summary>
+            <ul class="feat">
+              <li data-i18n="p6.f1">Sélecteur de fichiers pour charger un fichier XML ou JSON</li>
+              <li data-i18n="p6.f2">Affichage selon le modèle master / detail</li>
+              <li data-i18n="p6.f3">Sauvegarde aux formats XML et JSON</li>
+              <li data-i18n="p6.f4">Recherche insensible à la casse pour filtrer les données</li>
+              <li data-i18n="p6.f5">Internationalisation : interface en anglais par défaut, traduisible</li>
+            </ul>
+          </details>
+          <ul class="tags">
+            <li>C++</li>
+            <li>Qt</li>
+            <li>XML/JSON</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="project reveal" data-cat="soft">
+        <div class="project-img"><img src="assets/img/biblio_num.png" alt="Bibliothèque numérique" loading="lazy"></div>
+        <div class="project-body">
+          <span class="project-meta" data-i18n="p1.meta">Projet IUT · CLI</span>
+          <h3 data-i18n="p1.t">Bibliothèque numérique</h3>
+          <p data-i18n="p1.d">Application en ligne de commande robuste pour gérer une bibliothèque, répondant
+            précisément à un cahier des charges exigeant.</p>
+          <details>
+            <summary data-i18n="more">Ce que j'ai appris</summary>
+            <p data-i18n="p1.l">Prise en main du développement en ligne de commande, et importance de la rigueur et du
+              respect du cahier des charges.</p>
+          </details>
+          <ul class="tags">
+            <li>C++</li>
+            <li>CLI</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="project reveal" data-cat="soft">
+        <div class="project-img"><img src="assets/img/algos.png" alt="Algorithmes de tri" loading="lazy"></div>
+        <div class="project-body">
+          <span class="project-meta" data-i18n="p2.meta">Projet IUT · Algorithmique</span>
+          <h3 data-i18n="p2.t">Démonstration d'algorithmes</h3>
+          <p data-i18n="p2.d">Implémentation et comparaison de plusieurs algorithmes de tri pour mesurer l'impact de la
+            complexité sur les performances.</p>
+          <details>
+            <summary data-i18n="more">Ce que j'ai appris</summary>
+            <p data-i18n="p2.l">Le choix d'un algorithme ne se fait pas au hasard : il faut raisonner sur les données à
+              traiter.</p>
+          </details>
+          <ul class="tags">
+            <li data-i18n="tag.algo">Algorithmique</li>
+            <li data-i18n="tag.complex">Complexité</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="project reveal" data-cat="web">
+        <div class="project-img"><img src="assets/img/site_BUT_image.png" alt="Site du BUT Informatique" loading="lazy">
+        </div>
+        <div class="project-body">
+          <span class="project-meta" data-i18n="p4.meta">Projet IUT · Équipe de 3</span>
+          <h3 data-i18n="p4.t">Site de présentation du BUT Info</h3>
+          <p data-i18n="p4.d">Site web en HTML/CSS présentant le BUT Informatique d'Arles aux lycéens, pour le compte de
+            l'IUT d'Aix-Marseille.</p>
+          <details>
+            <summary data-i18n="more">Ce que j'ai appris</summary>
+            <p data-i18n="p4.l">Travail en équipe, dans le respect des besoins du client et maîtrise des outils web.</p>
+          </details>
+          <ul class="tags">
+            <li>HTML</li>
+            <li>CSS</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="project reveal" data-cat="sys">
+        <div class="project-img"><img src="assets/img/dual_Boot.png" alt="Dual boot Windows / Linux" loading="lazy">
+        </div>
+        <div class="project-body">
+          <span class="project-meta" data-i18n="p3.meta">Projet IUT · Équipe de 2</span>
+          <h3 data-i18n="p3.t">Installation d'un poste de développement</h3>
+          <p data-i18n="p3.d">Mise en place d'un environnement de travail en configurant un ordinateur en dual boot
+            Windows / Linux.</p>
+          <details>
+            <summary data-i18n="more">Ce que j'ai appris</summary>
+            <p data-i18n="p3.l">Partitionnement des disques, installation des systèmes d'exploitation et configuration
+              des outils de développement.</p>
+          </details>
+          <ul class="tags">
+            <li>Linux</li>
+            <li>Windows</li>
+            <li>Bash</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="project reveal" data-cat="sys">
+        <div class="project-img"><img src="assets/img/arduino.png" alt="Arrosage automatique Arduino" loading="lazy">
+        </div>
+        <div class="project-body">
+          <span class="project-meta" data-i18n="p5.meta">Licence Pro SRI · Arduino · Équipe de 5</span>
+          <h3 data-i18n="p5.t">Système d'arrosage automatique</h3>
+          <p data-i18n="p5.d">Arrosage déclenché sous un seuil d'humidité, avec une alerte sonore (capteur de distance)
+            quand le réservoir atteint un niveau critique.</p>
+          <details>
+            <summary data-i18n="more">Ce que j'ai appris</summary>
+            <p data-i18n="p5.l">Initiation à Arduino et aux capteurs, et coordination au sein d'une équipe.</p>
+          </details>
+          <ul class="tags">
+            <li>Arduino</li>
+            <li data-i18n="tag.sensors">Capteurs</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>

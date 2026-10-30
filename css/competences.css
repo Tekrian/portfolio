@@ -1,0 +1,97 @@
+/* Section Compétences */
+
+/* ---------- Compétences ---------- */
+.skills-groups {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.skill-group {
+  padding: 28px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.skill-group h3 {
+  font-size: .8rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+.tool-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.tool {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--surface-2);
+  font-weight: 500;
+  transition: transform .2s, background .2s;
+}
+.tool:hover { transform: translateX(4px); background: #252c3d; }
+.tool-icon {
+  width: 34px; height: 34px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  object-fit: contain;
+  background: #fff;
+  padding: 4px;
+}
+.tool-icon.txt {
+  display: grid;
+  place-items: center;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font: 700 .78rem var(--font-head);
+  padding: 0;
+}
+
+/* ---------- Compétences du BUT ---------- */
+.but-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.but-card {
+  position: relative;
+  padding: 26px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color .25s, transform .25s;
+}
+.but-card:hover { border-color: var(--accent); transform: translateY(-4px); }
+.but-num {
+  position: absolute;
+  top: 22px; right: 22px;
+  font: 700 .8rem var(--font-head);
+  color: var(--accent);
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+}
+.but-card h4 { font-size: 1.15rem; margin-bottom: 8px; }
+.but-card > p { color: var(--muted); font-size: .92rem; margin-bottom: 16px; }
+.but-projects {
+  list-style: none;
+  margin: 0;
+  padding: 14px 0 0;
+  border-top: 1px dashed var(--border);
+  display: grid;
+  gap: 6px;
+}
+.but-projects a {
+  font-size: .88rem;
+  color: var(--text);
+  display: inline-flex;
+  gap: 8px;
+}
+.but-projects a::before { content: "→"; color: var(--accent); }
+.but-projects a:hover { color: var(--accent); }
+
+/* Icône JavaScript (carré jaune officiel) */
+.tool-icon.tool-js { background: #f7df1e; color: #1a1a1a; font-size: .75rem; }

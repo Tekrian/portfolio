@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Briand Kokou TETEH | Portfolio</title>
+  <meta name="description" content="Portfolio de Briand Kokou TETEH, étudiant en 2e année de BUT Informatique à l'IUT d'Aix-Marseille (Arles). Recherche un stage du 29 mars au 18 juin 2027.">
+  <meta name="author" content="Briand Kokou TETEH">
+  <meta name="theme-color" content="#0d1017">
+  <!-- Aperçu quand le lien est partagé (LinkedIn, WhatsApp, Discord…) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Briand Kokou TETEH | Portfolio">
+  <meta property="og:description" content="Étudiant en 2e année de BUT Informatique à Arles. Recherche un stage du 29 mars au 18 juin 2027.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/accueil.css">
+  <link rel="stylesheet" href="css/apropos.css">
+  <link rel="stylesheet" href="css/parcours.css">
+  <link rel="stylesheet" href="css/competences.css">
+  <link rel="stylesheet" href="css/projets.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ===== EN-TÊTE / NAVIGATION ===== -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#accueil" class="logo" aria-label="Accueil">
+        <span class="logo-mark">B<span>T</span></span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#apropos" class="nav-link" data-i18n="nav.about">À propos</a></li>
+        <li><a href="#parcours" class="nav-link" data-i18n="nav.path">Parcours</a></li>
+        <li><a href="#competences" class="nav-link" data-i18n="nav.skills">Compétences</a></li>
+        <li><a href="#projets" class="nav-link" data-i18n="nav.projects">Projets</a></li>
+        <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <div class="lang-switch" role="group" aria-label="Langue / Language">
+          <button type="button" class="lang-btn is-active" data-lang="fr">FR</button>
+          <button type="button" class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <button type="button" class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+    <div class="scroll-progress" id="scroll-progress"></div>
+  </header>
+
+  <!-- Les sections sont dans le dossier sections/ et chargées ici par js/loader.js -->
+  <main id="app">
+    <div data-section="accueil"></div>
+    <div data-section="apropos"></div>
+    <div data-section="parcours"></div>
+    <div data-section="competences"></div>
+    <div data-section="projets"></div>
+    <div data-section="contact"></div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="#accueil" class="logo logo-sm" aria-label="Haut de page"><span class="logo-mark">B<span>T</span></span></a>
+      <p>© <span id="year">2026</span> Briand Kokou TETEH. <span data-i18n="footer.rights">Tous droits réservés.</span></p>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/kokou-briand-teteh/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/Tekrian" target="_blank" rel="noopener">GitHub</a>
+        <a href="#accueil" class="to-top" data-i18n="footer.top">Haut de page ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/loader.js"></script>
+  <script src="js/lang.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/projets.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/cv.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

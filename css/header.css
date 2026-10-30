@@ -1,0 +1,119 @@
+/* En-tête : logo BT, menu, bascule FR/EN, barre de progression */
+
+/* ---------- Logo BT ---------- */
+.logo { display: inline-flex; align-items: center; }
+
+.logo-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 2px solid var(--text);
+  border-radius: 10px;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+  transition: border-color .25s, transform .25s;
+}
+.logo-mark span { color: var(--accent); }
+.logo:hover .logo-mark { border-color: var(--accent); transform: rotate(-4deg); }
+.logo-sm .logo-mark { width: 36px; height: 36px; font-size: .9rem; }
+
+/* ---------- Header / Nav ---------- */
+.header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: var(--header-h);
+  z-index: 100;
+  transition: background .3s, box-shadow .3s;
+}
+.header.is-scrolled {
+  background: rgba(13, 16, 23, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 1px 0 var(--border);
+}
+
+.nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 4px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  position: relative;
+  display: block;
+  padding: 8px 14px;
+  font-size: .92rem;
+  font-weight: 500;
+  color: var(--muted);
+  border-radius: 999px;
+  transition: color .2s, background .2s;
+}
+.nav-link:hover { color: var(--text); }
+.nav-link.is-active { color: var(--text); background: var(--surface-2); }
+
+.nav-actions { display: flex; align-items: center; gap: 12px; }
+
+.lang-switch {
+  display: inline-flex;
+  padding: 3px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+}
+.lang-btn {
+  border: 0;
+  background: none;
+  color: var(--muted);
+  font: 600 .78rem var(--font-body);
+  letter-spacing: .04em;
+  padding: 6px 11px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background .2s, color .2s;
+}
+.lang-btn.is-active { background: var(--accent); color: #141414; }
+
+.burger {
+  display: none;
+  width: 42px; height: 42px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.burger span {
+  width: 18px; height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: transform .25s, opacity .25s;
+}
+.burger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.burger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.burger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.scroll-progress {
+  position: absolute;
+  left: 0; bottom: 0;
+  height: 2px;
+  width: 0;
+  background: var(--accent);
+}

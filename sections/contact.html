@@ -1,0 +1,56 @@
+<!-- ===== CONTACT ===== -->
+<section class="section" id="contact">
+  <div class="container">
+    <header class="section-head reveal">
+      <span class="section-num">05</span>
+      <h2 data-i18n="contact.title">Contact</h2>
+    </header>
+
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <h3 data-i18n="contact.h">Envie de collaborer ?</h3>
+        <p data-i18n="contact.p">Je recherche un <strong>stage de 2<sup>e</sup> année de BUT Informatique du 29 mars au 18 juin 2027</strong> (12 semaines). N'hésitez pas à me contacter pour une offre, ou simplement pour échanger sur un projet.</p>
+
+        <ul class="contact-list">
+          <li>
+            <span class="c-icon c-icon--mail" aria-hidden="true"></span>
+            <div><span class="c-label">Email</span><a href="mailto:tetehbriand@gmail.com">tetehbriand@gmail.com</a></div>
+          </li>
+          <li>
+            <span class="c-icon c-icon--linkedin" aria-hidden="true"></span>
+            <div><span class="c-label">LinkedIn</span><a href="https://www.linkedin.com/in/kokou-briand-teteh/" target="_blank" rel="noopener">linkedin.com/in/kokou-briand-teteh</a></div>
+          </li>
+          <li>
+            <span class="c-icon c-icon--github" aria-hidden="true"></span>
+            <div><span class="c-label">GitHub</span><a href="https://github.com/Tekrian" target="_blank" rel="noopener">github.com/Tekrian</a></div>
+          </li>
+          <li>
+            <span class="c-icon c-icon--pin" aria-hidden="true"></span>
+            <div><span class="c-label" data-i18n="contact.loc">Localisation</span><span>Arles, France</span></div>
+          </li>
+        </ul>
+
+        <a href="assets/cv/CV-Briand-TETEH.pdf" class="btn btn-primary cv-btn js-cv" download data-i18n="cv.download" hidden>Télécharger mon CV</a>
+      </div>
+
+      <form class="contact-form reveal" id="contact-form" novalidate>
+        <h3 data-i18n="form.h">Envoyer un message</h3>
+        <label>
+          <span data-i18n="form.name">Nom / Entreprise</span>
+          <input type="text" name="name" required>
+        </label>
+        <label>
+          <span data-i18n="form.email">Votre email</span>
+          <input type="email" name="email" required>
+        </label>
+        <label>
+          <span data-i18n="form.msg">Votre message</span>
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <button type="submit" class="btn btn-primary btn-block" data-i18n="form.send">Envoyer le message</button>
+        <p class="form-status" id="form-status" role="status"></p>
+        <p class="form-note" data-i18n="form.note">Le message s'ouvre dans votre application mail : aucune donnée n'est stockée sur ce site.</p>
+      </form>
+    </div>
+  </div>
+</section>
